@@ -11,6 +11,7 @@ pipeline {
 		stage('Checkout') {
 			steps {
 				sh "./gradlew --version"
+				echo "<path to the sdk on jenkins" >> local.properties
 				echo "Build"
 				echo "BUILD_NUMBER - $env.BUILD_NUMBER"
 				echo "BUILD_ID - $env.BUILD_ID"
